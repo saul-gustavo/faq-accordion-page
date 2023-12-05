@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --specimen: 'Work Sans', sans-serif;
+    --size: 16px;
+    /* colors */
+    --white: hsl(0, 100%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-pruple: hsl(292, 42%, 14%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+    font-size: var(--size);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--specimen);
+    position: relative;
+    background: var(--light-pink);
+}
+
+body::after {
+  content: "";
+  background: url(./images/background-pattern-desktop.svg) no-repeat center / cover;
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+}
+
+.container-main {
+  width: 100%;
+  max-width: 600px;
+  min-height: 50vh;
+  background-color: white;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 30px;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px -10px var(--grayish-purple);
+}
+
+.main {
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+
+.main .start {
+  width: 38px;
+}
+
+.title {
+  font-size: 3.1em;
+}
+
+.faq {
+  margin-top: 30px;
+  padding-bottom: 0.6rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--light-pink);
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.questions > p {
+  transition: color 0.4s ease;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.questions > p:hover {
+  color: #ad28eb;
+}
+
+.content-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.content-text > p {
+  line-height: 1.5;
+  padding: 10px 0px;
+  color: var(--grayish-purple);
+}
+
+
+.faq.active .content-text {
+  max-height: 300px;
+}
+
+.inactive-svg {
+  display: block;
+  max-width: 25px;
+  object-fit: cover;
+}
+
+.active-svg {
+  display: none;
+  max-width: 25px;
+  object-fit: cover;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+
+.attribution > a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.attribution > a:hover {
+  color: blue;
+}
+
+@media screen and (max-width: 375px) {
+  .container-main {
+    padding: 30px 30px;
+  }
+
+  .title {
+    font-size: 2.3em;
+  }
+  .start {
+    width: 10%;
+  }
+  .questions > p {
+    width: 250px;
+  }
+}
+
+
+
+/* .container {
+  width: 100%;
+  height: 400px;
+  background: url(./images/background-pattern-desktop.svg) no-repeat center / cover;
+  background-position:center;
+  position: absolute;
+  top: 0;
+} */
+/* 
+.container-main {
+    padding: 2em 3em;
+    background-color: white;
+    max-width: 500px;
+    width: 100%;
+}
+
+.header {
+    display: inline-flex;
+}
+
+.icon-star{
+    width: 10%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.accordion-header {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accordion-btn {
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-width: 500px;
+  }
+  
+  .accordion-content.show {
+    max-height: 500px; Ajusta la altura máxima según tus necesidades 
+    max-width: 500px;
+  }
+   */
